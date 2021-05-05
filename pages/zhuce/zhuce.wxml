@@ -1,0 +1,24 @@
+
+<view class="container">
+  <image src="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/zhuce.jpg"></image>
+</view>
+<view class="login_box">
+  <view class="section">
+    <input placeholder="请输入用户名" placeholder-class="color" bindblur='username' />
+    <image src="https://7069-pintu-game-52d2a-1301643624.tcb.qcloud.la/pintu_icon/username.png"></image>
+  </view>
+  <view class="section">
+    <input type='number' maxlength='11' placeholder="请输入手机号" placeholder-class="color" bindblur='mobile' />
+    <image src="https://7069-pintu-game-52d2a-1301643624.tcb.qcloud.la/pintu_icon/mobile.png"></image>
+  </view>
+  <view class="section">
+    <input password="true" placeholder="请输入密码" placeholder-class="color" bindblur='pass1' />
+    <image src="https://7069-pintu-game-52d2a-1301643624.tcb.qcloud.la/pintu_icon/pass.png"></image>
+  </view>
+  <view class="section">
+    <input password="true" placeholder="确认密码" placeholder-class="color" bindblur='pass2' />
+    <image src="https://7069-pintu-game-52d2a-1301643624.tcb.qcloud.la/pintu_icon/pass.png"></image>
+  </view>
+  <button class="register" type="warn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">注册</button>
+  <!-- <van-button class="register" type="primary" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" block>注册</van-button> -->
+</view>

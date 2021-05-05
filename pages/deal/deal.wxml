@@ -1,0 +1,152 @@
+<block wx:if="{{which==1}}">
+<van-notice-bar
+  left-icon="volume-o"
+  text="注意：为了同学们的财产安全，本小程序仅支持同学们线下交易，一手交钱一手交货，小程序不收取交易中间费用"
+/>
+<!-- 搜索框 -->
+<van-search 
+  value="{{ value3 }}"
+  placeholder="请输入搜索商品关键词"
+  bind:search="onSearch"
+  bind:change="onChange"
+  input-align="center"
+  bind:cancel="onCancel"
+  show-action
+/>
+<!-- 搜索列表开始 -->
+<view class="list" wx:for="{{search}}" wx:key="_id">
+  <navigator class="list_1" url='/pages/xiangqing/xiangqing?_id={{item._id}}'>
+    <image src="{{item.imageURL[0]}}" style="width:100rpx;height:100rpx;margin-left:10rpx"></image>
+    <view>商品:{{item.name}}</view>
+    <view style="margin-right:50rpx">价格：{{item.price}}</view>
+  </navigator>
+  <view class="line"></view>
+</view>
+<!-- 搜索列表结束 -->
+<van-tabs animated bind:click="onClick">
+  <van-tab title="跳蚤市场">
+    <view>
+      <van-dropdown-menu>
+      <van-dropdown-item bind:change="change" value="{{value1}}" options="{{ option1 }}" />
+       <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+       </van-dropdown-menu>
+       <block  wx:if="{{value1==0}}" >
+         <!-- 商品列表模块开始--------- -->
+       <van-card class="shop" wx:for="{{shangpin}}" wx:key="_id"
+        tag="{{item.tag}}"
+        price="{{item.price}}"
+        desc="{{item.leibie}}"
+        title="{{item.name}}"
+        thumb="{{ item.imageURL[0] }}"
+       >
+       <view slot="footer">
+          <van-button bindtap='xiangqing' color="#7232dd" data-id="{{item._id}}"  size="mini">查看详情</van-button>
+       </view>
+        </van-card>
+        <!-- 商品列表模块结束--------- -->
+       </block>
+       <!-- 学习用品 -->
+       <block class="shop" wx:if="{{value1==1}}">
+        <van-card wx:for="{{xuexi}}" wx:key="_id"
+        tag="{{item.tag}}"
+        price="{{item.price}}"
+        desc="{{item.leibie}}"
+        title="{{item.name}}"
+        thumb="{{ item.imageURL[0] }}"
+       >
+       <view slot="footer">
+          <van-button bindtap='xiangqing' color="#7232dd" data-id="{{item._id}}"  size="mini">查看详情</van-button>
+       </view>
+        </van-card>
+       </block>
+       <!-- 生活用品 -->
+       <block wx:if="{{value1==2}}">
+        <van-card class="shop" wx:for="{{shenghuo}}" wx:key="_id"
+        tag="{{item.tag}}"
+        price="{{item.price}}"
+        desc="{{item.leibie}}"
+        title="{{item.name}}"
+        thumb="{{ item.imageURL[0] }}"
+       >
+       <view slot="footer">
+          <van-button bindtap='xiangqing' color="#7232dd" data-id="{{item._id}}"  size="mini">查看详情</van-button>
+       </view>
+        </van-card>
+       </block>
+    </view>
+  </van-tab>
+
+  <!-- 校园兼职界面 -->
+  <van-tab title="校园兼职">
+      <van-button  bindtap="dashang" icon="smile-o" type="info"size="large" color="linear-gradient(to right, #4bb0ff, #6149f6)">
+        哇塞，找兼职好方便，我要打赏开发者
+
+      </van-button>
+      <van-action-sheet
+          title="感谢您的打赏"
+          show="{{ show }}"
+          actions="{{actions}}"
+          bind:close="onClose"
+          bind:select="onSelect"
+/>
+<!-- <van-sidebar active-key="{{ activeKey }}"  bind:change="workchange">
+  <van-sidebar-item title="全部兼职" />
+  <van-sidebar-item title="校内兼职" />
+  <van-sidebar-item title="校外兼职" />
+</van-sidebar> -->
+<view>
+<block   >
+         <!-- 兼职列表模块开始--------- -->
+       <van-card class="work" wx:for="{{work}}" wx:key="_id"
+        tag="{{item.place}}"
+        price="{{item.money}}"
+        desc="{{item.kind}}"
+        title="{{item.title}}"
+        thumb="{{ item.src[0] }}"
+       >
+       <view slot="footer">
+          <van-button bindtap='jianzhi' color="#7232dd" data-id="{{item._id}}"  size="mini">查看详情</van-button>
+       </view>
+        </van-card>
+        </block>
+      </view>
+ </van-tab>
+
+</van-tabs>
+</block>
+
+
+<block wx:if="{{which==0}}">
+  <van-divider
+  contentPosition="center"
+  customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;"
+>
+  邢院介绍
+</van-divider>
+<swiper class="swiper1" autoplay="{{true}}" interval="5000" circular="{{true}}" indicator-dots indicator-active-color="black">
+  <swiper-item >
+    <image mode="widthFix" src="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/xyquanlan.png"/>
+  </swiper-item>
+  <swiper-item >
+    <image mode="widthFix" src="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/xy体育馆.png" />
+  </swiper-item>
+</swiper>
+<van-button bindtap='jianzhi' color="#7232dd" block>查看邢院详情</van-button>
+<van-divider
+  contentPosition="center"
+  customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;"
+>
+  院系
+</van-divider>
+<van-grid direction="horizontal" column-num="2">
+  <van-grid-item icon="photo-o" text="数信学院" />
+  <van-grid-item icon="photo-o" text="物电学院" />
+  <van-grid-item icon="photo-o" text="文学院" />
+  <van-grid-item icon="photo-o" text="生工学院" />
+  <van-grid-item icon="photo-o" text="外国语学院" />
+  <van-grid-item icon="photo-o" text="体育学院" />
+  <van-grid-item icon="photo-o" text="初等教育学院" />
+  <van-grid-item icon="photo-o" text="马克思学院" />
+
+</van-grid>
+</block>

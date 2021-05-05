@@ -1,0 +1,65 @@
+<block wx:if="{{which==1}}">
+<van-divider
+  contentPosition="center"
+  customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;"
+>
+  发布首页信息
+</van-divider>
+<form bindsubmit="submit">
+ <view class="up">
+   <view class="upload">
+     <view class="upload_1">
+       <view>正面底部：</view>
+       <input placeholder="正面底部显示的字" name="title"></input>
+     </view>
+     <view class="line"></view>
+
+     <view class="upload_1">
+       <view>背面底部文字</view>
+       <input placeholder="" name="otherInfo"></input>
+     </view>
+     <view class="line"></view>
+
+     <view class="upload_1">
+       <view>右下角</view>
+       <input placeholder="" name="score"></input>
+     </view>
+     <view class="line"></view>
+
+
+
+<!-- 选择分类 -->
+<view class="upload_1">
+      <radio-group name="isOpenFilp">
+        <radio value="false">false</radio>
+        <radio value="true">true</radio>
+      </radio-group>
+</view>  
+</view>
+
+<!-- 商品简介upload -->
+ <view class="upload">
+    <view>背面简介：</view>
+    <textarea name="lines" maxlength="80" placeholder="请输入商品简介时间地点等(80字以下)" style=""></textarea>
+ </view>
+
+<!-- 上传图片 -->
+<scroll-view class="img" scroll-y="true">
+  <block wx:for="{{img}}" wx:key="fileID">
+    <image src="{{item}}" style="width:80rpx;height:80rpx"></image>
+    <button size="mini" type="warn" plain="true" bindtap="delete" data-id="{{index}}" data-src="{{item}}">删除图片</button>
+  </block>
+  <view class="anniu">
+    <van-button bindtap="upload_img" type="primary" >添加图片</van-button>
+  </view>
+</scroll-view>
+  
+</view>
+
+<van-button type="primary" form-type="submit" block>提交</van-button>
+</form>
+</block>
+
+<block wx:if="{{which==0}}">
+  <view>此功能已停用，敬请期待</view>
+</block>

@@ -1,0 +1,23 @@
+<block wx:if="{{which==1}}">
+<van-divider
+  contentPosition="center"
+  customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;"
+>
+  我发布的商品：
+</van-divider>
+<van-card class="shop" wx:for="{{bannerData}}" wx:key="_id"
+        tag="{{item.score}}"
+        price="{{item.otherInfo}}"
+        desc="{{item.isOpenFilp}}"
+        title="{{item.title}}"
+        thumb="{{ item.img[0] }}"
+       >
+       <view slot="footer">
+          <van-button bindtap='xiajia' color="#7232dd" data-id="{{item._id}}"  data-img="{{item.img}}" size="mini">下架</van-button>
+       </view>
+        </van-card> 
+</block>
+
+<block wx:if="{{which==0}}">
+  <view> 此功能已经停用</view>
+</block>

@@ -1,0 +1,124 @@
+<van-notice-bar
+  left-icon="volume-o"
+  text="由于发布服务必须要企业账号，所以阉割了发布的功能、请添加开发者微信13400280751"
+/>
+<swiper class="swiper1" autoplay="{{true}}" interval="5000" circular="{{true}}" indicator-dots indicator-active-color="black">
+  <swiper-item >
+    <image mode="widthFix" src="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/xyquanlan.png"/>
+  </swiper-item>
+  <swiper-item >
+    <image mode="widthFix" src="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/xy体育馆.png" />
+  </swiper-item>
+</swiper>
+<van-divider
+  contentPosition="center"
+  customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;"
+>
+  欢迎加入邢院帮
+</van-divider>
+<van-grid clickable column-num="2">
+  <van-grid-item
+    icon="home-o"
+    link-type="navigateTo"
+    url="/pages/login/login"
+    text="登录账号"
+  />
+  <van-grid-item
+    icon="user-circle-o" 
+    link-type="navigateTo"
+    url="/pages/zhuce/zhuce" 
+    text="注册账号"
+  />
+
+</van-grid>
+<!-- -------------------------------------------- -->
+
+
+<view class="swiper">
+<swiper class='bannerGrid' previous-margin="60rpx" next-margin="60rpx" bindchange="bannerSwiper">
+      
+      <swiper-item class="item" wx:for="{{ bannerData }}" wx:key="{{index}}">
+        <view class="swiper-item">
+          <view class='boxItem column'>
+            <!-- 卡牌 -->
+            <view class="flipGroup  {{ item.isOpenFilp ? 'on':''}}" catchtap='switchFlip' data-index='{{ index }}'>
+              <view class="flipBox">
+                <!-- 正面内容 -->
+                <view class="sideWrap front">
+                  <!-- 卡片 -->
+                  <view class='posterGroup'>
+                    <view class='imgWrap'>
+                      <image class='img' src="{{ item.img[0] }}" mode="aspectFit"></image>
+                      <view class='detailBox'>
+                        <view class='mSmall f14 relative mb10'> {{item.title}} </view>
+                      </view>
+                    </view>
+                  </view>
+                  <!-- / 卡片 -->
+                </view>
+                <!-- 背面内容 -->
+                <view class="sideWrap back">
+                  <!-- detail -->
+                  <view class='backGroup'>
+                    <image class='img' src="{{ item.img[1] }}" mode="aspectFit"></image>
+                    <view class='textWrap'>
+                      <image class='iconFlag' src="{{ iconFlag }}" mode="widthFix"></image>
+                      <view class='mt10'>
+                        <text class='mTitle cf45 mb40'>{{ item.lines }}</text>
+                      </view>
+                    </view> 
+                  </view>
+                  <view class='otherInfo'>
+                    <view class='movTitle'>
+                       {{ item.title }} : {{ item.otherInfo }} 
+                      <text class='score'>{{ item.score }}</text>
+                    </view>
+                    <view class='copyright'>
+                      <view class='copyrightGrid'>
+                        <image class='logo' src='{{ logo }}' mode='widthFix'></image>
+                        
+                      </view>
+                    </view>
+                  </view>
+
+
+                </view>
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </swiper-item>
+
+      
+  </swiper>
+</view>
+
+
+<!-- 海报背景 -->
+<!-- <view class='poster'>
+<view class='bgImg' style=" background: url({{ bannerData[bannerCurrent].img }}); background-size:cover;"></view>
+<view class='cover'></view>
+</view> -->
+
+
+<!-- -------------------------- -->
+<van-divider
+  contentPosition="center"
+  customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;"
+>
+  大学生学习/考证指南
+</van-divider>
+<van-grid icon-size='30px' center>
+  <van-grid-item bind:click='onClickButton' icon="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/cardicon/logo (2).png" text="CET考试" />
+  <van-grid-item bind:click='onClickButton' icon="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/cardicon/jioazi.png" text="教资" />
+  <van-grid-item bind:click='onClickButton' icon="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/cardicon/计算机.png" text="计算机等级考试" />
+  <van-grid-item bind:click='onClickButton' icon="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/cardicon/初会.png" text="初会" />
+</van-grid>
+<van-action-sheet
+          title="官方考试导航"
+          show="{{ show }}"
+          actions="{{actions}}"
+          bind:close="onClose"
+          bind:select="onSelect"
+/>

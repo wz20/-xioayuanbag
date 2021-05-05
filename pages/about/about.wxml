@@ -1,0 +1,14 @@
+<view class="content">
+        <!-- 头像 -->
+        <view class="author-date"> 
+            <image src="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/zhuce.jpg" class="author"></image>
+            <text class="date">18物联网王泽 2021年1月</text>
+        </view>
+        <!-- 标题内容 -->
+         <text class="title">关于此小程序</text>
+         <view>版本1.2.0</view>
+         <image class="image" mode="" src="cloud://wz-2gelhqr3cc1d841e.777a-wz-2gelhqr3cc1d841e-1301315039/cool.jpg"></image>
+         <text class="article-content">方便同学，提升自我，创造价值</text>
+
+
+    </view>

@@ -1,0 +1,24 @@
+<block wx:if="{{which==1}}">
+<van-divider
+  contentPosition="center"
+  customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;"
+>
+  我发布的兼职：
+</van-divider>
+<van-card class="work" wx:for="{{work}}" wx:key="_id"
+        tag="{{item.place}}"
+        price="{{item.money}}"
+        desc="{{item.kind}}"
+        title="{{item.title}}"
+        thumb="{{ item.src[0] }}"
+       >
+       <view slot="footer">
+          <van-button bindtap='xiajia' color="#7232dd" data-id="{{item._id}}" data-img="{{item.src}}"  size="mini">下架</van-button>
+       </view>
+        </van-card>
+
+      </block>
+
+<block wx:if="{{which==0}}">
+  此功能已停用
+</block>

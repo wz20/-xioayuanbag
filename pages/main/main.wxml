@@ -1,0 +1,108 @@
+<!--pages/main/main.wxml-->
+<block wx:if="{{which==1}}">
+<van-notice-bar
+  left-icon="volume-o"
+  text="不足之处请指出，13400280751"
+/>
+
+<view class='amountBg'>
+  <view class='img'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class='account'>
+    <view class='nick-name'>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+    <view class='address'>
+      <open-data type="userCountry" lang="zh_CN"></open-data>·
+      <open-data type="userProvince" lang="zh_CN"></open-data>·
+      <open-data type="userCity" lang="zh_CN"></open-data>
+    </view>
+  </view>
+</view>
+
+ <van-cell
+  is-link
+  title="登录"
+  link-type="navigateTo"
+  url="/pages/login/login"
+/>
+<van-cell
+  is-link
+  title="发布商品"
+  link-type="navigateTo"
+  url="/pages/fabu/fabu"
+/>
+<van-cell
+  is-link
+  title="发布兼职"
+  link-type="navigateTo"
+  url="/pages/fabu1/fabu1"
+/>
+ <van-cell
+  is-link
+  title="管理我发布的"
+  value="商品"
+  bind:click="gl"
+  data-id="{{openID}}"
+
+/>
+<van-cell
+  is-link
+  title="管理我发布的"
+  value="兼职"
+  bind:click="glwork"
+  data-id="{{openID}}"
+/>
+<van-cell
+  is-link
+  title="发布首页广告"
+  value="仅开发者可用"
+  bind:click="fabu2"
+  data-id="{{openID}}"
+/>
+<van-cell
+  is-link
+  title="管理首页广告"
+  value="仅开发者可用"
+  bind:click="gl2"
+  data-id="{{openID}}"
+/>
+<van-cell
+  is-link
+  title="关于"
+  icon='smile-o'
+  link-type="navigateTo"
+  url="/pages/about/about"
+/>
+</block>
+
+<block wx:if="{{which==0}}">
+  <van-notice-bar
+  left-icon="volume-o"
+  text="不足之处请指出，13400280751"
+/>
+
+<view class='amountBg'>
+  <view class='img'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class='account'>
+    <view class='nick-name'>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+    <view class='address'>
+      <open-data type="userCountry" lang="zh_CN"></open-data>·
+      <open-data type="userProvince" lang="zh_CN"></open-data>·
+      <open-data type="userCity" lang="zh_CN"></open-data>
+    </view>
+  </view>
+</view>
+
+ <van-cell
+  is-link
+  title="登录"
+  link-type="navigateTo"
+  url="/pages/login/login"
+/>
+</block>

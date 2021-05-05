@@ -1,0 +1,68 @@
+<block wx:if="{{which==1}}">
+<van-divider
+  contentPosition="center"
+  customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;"
+>
+  发布兼职信息
+</van-divider>
+<form bindsubmit="submit">
+ <view class="up">
+   <view class="upload">
+     <view class="upload_1">
+       <view>兼职名称：</view>
+       <input placeholder="请输入兼职名" name="title"></input>
+     </view>
+     <view class="line"></view>
+
+     <view class="upload_1">
+       <view>兼职价格：</view>
+       <input placeholder="请输入兼职工资" name="money"></input>
+     </view>
+     <view class="line"></view>
+
+     <view class="upload_1">
+       <view>兼职种类：</view>
+       <input placeholder="请输入兼职种类" name="kind"></input>
+     </view>
+     <view class="line"></view>
+
+     <view class="upload_1">
+       <view>联系方式：</view>
+       <input placeholder="如果有买家会通过此方式联系你" name="way"></input>
+     </view>
+     <view class="line"></view>
+
+<!-- 选择分类 -->
+<view class="upload_1">
+      <radio-group name="place">
+        <radio value="校内">校内</radio>
+        <radio value="校外">校外</radio>
+      </radio-group>
+</view>  
+</view>
+
+<!-- 商品简介upload -->
+ <view class="upload">
+    <view>兼职简介：</view>
+    <textarea name="about" maxlength="80" placeholder="请输入商品简介时间地点等(80字以下)" style=""></textarea>
+ </view>
+
+<!-- 上传图片 -->
+<scroll-view class="img" scroll-y="true">
+  <block wx:for="{{img}}" wx:key="fileID">
+    <image src="{{item}}" style="width:80rpx;height:80rpx"></image>
+    <button size="mini" type="warn" plain="true" bindtap="delete" data-id="{{index}}" data-src="{{item}}">删除图片</button>
+  </block>
+  <view class="anniu">
+    <van-button bindtap="upload_img" type="primary" >添加图片</van-button>
+  </view>
+</scroll-view>
+  
+</view>
+
+<van-button type="primary" form-type="submit" block>提交</van-button>
+</form>
+</block>
+<block wx:if="{{which==0}}">
+  <view> 此功能已停用，敬请期待</view>
+</block>
