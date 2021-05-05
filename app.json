@@ -1,0 +1,90 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/deal/deal",
+    "pages/jianzhi/jianzhi",
+    "pages/login/login",
+    "pages/zhuce/zhuce",
+    "pages/fabu/fabu",
+    "pages/fabu1/fabu1",
+    "pages/fabu2/fabu2",
+    "pages/xiangqing/xiangqing",
+    "pages/guanli/guanli",
+    "pages/guanli1/guanli1", 
+    "pages/guanli2/guanli2",
+    "pages/about/about"
+ 
+
+
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "邢院帮",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/shouye.png",
+        "selectedIconPath": "image/shouye1.png"
+      },
+      {
+        "pagePath":"pages/deal/deal",
+        "text": "校园bang",
+        "iconPath": "image/deal.png",
+        "selectedIconPath": "image/deal1.png"
+      },
+      {
+        "pagePath":"pages/main/main",
+        "text": "我的",
+        "iconPath": "image/wode.png",
+        "selectedIconPath": "image/wode1.png"
+      }
+    ]
+  },
+  
+    
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+  "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+  "van-card": "@vant/weapp/card/index",
+  "van-notify": "@vant/weapp/notify/index",
+  "van-field": "@vant/weapp/field/index",
+  "van-divider": "@vant/weapp/divider/index",
+  "van-dialog": "@vant/weapp/dialog/index",
+  "van-skeleton": "@vant/weapp/skeleton/index",
+  "van-goods-action": "@vant/weapp/goods-action/index",
+  "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+  "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+  "van-sidebar": "@vant/weapp/sidebar/index",
+  "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+  "van-radio": "@vant/weapp/radio/index",
+  "van-radio-group": "@vant/weapp/radio-group/index"
+
+  
+  }
+}

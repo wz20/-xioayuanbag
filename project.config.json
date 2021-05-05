@@ -1,0 +1,129 @@
+{
+    "miniprogramRoot": "miniprogram/",
+    "cloudfunctionRoot": "cloudfunctions/",
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "enhance": true,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": true,
+        "coverView": true,
+        "nodeModules": true,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": true,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "enableEngineNative": false,
+        "bundle": false,
+        "useIsolateContext": true,
+        "useCompilerModule": true,
+        "userConfirmedUseCompilerModuleSwitch": false,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true
+    },
+    "appid": "wx2a867adffabd1c67",
+    "projectname": "%E6%A0%A1%E5%9B%AD%E5%B8%AE",
+    "libVersion": "2.14.1",
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide",
+                    "query": ""
+                },
+                {
+                    "name": "login",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "注册",
+                    "pathName": "pages/zhuce/zhuce",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "商城",
+                    "pathName": "pages/deal/deal",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "详情页",
+                    "pathName": "pages/xiangqing/xiangqing",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "我的",
+                    "pathName": "pages/main/main",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "发布商品",
+                    "pathName": "pages/fabu/fabu",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "发布兼职",
+                    "pathName": "pages/fabu1/fabu1",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/guanli/guanli",
+                    "pathName": "pages/guanli/guanli",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/guanli2/guanli2",
+                    "pathName": "pages/guanli2/guanli2",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/guanli1/guanli1",
+                    "pathName": "pages/guanli1/guanli1",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/fabu2/fabu2",
+                    "pathName": "pages/fabu2/fabu2",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}
